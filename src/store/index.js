@@ -12,6 +12,12 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
+    addOne(state, index) {
+      state.fruits[index].amount ++
+    },
+    reset(state) {
+      state.fruits.map(item => item.amount = 0)
+    }
   },
   actions: {
   },
